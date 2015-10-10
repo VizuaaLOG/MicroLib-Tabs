@@ -29,6 +29,8 @@
          */
         if(typeof element === "string") {
             container = d.querySelectorAll(element)[0];
+        } else {
+            container = element;
         }
 
         /**
