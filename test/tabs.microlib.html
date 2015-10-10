@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs Test Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .tabs-headings {
+            width: 100%;
+            height: 39px;
+        }
+
+        .tab-heading {
+            float: left;
+            padding: 10px 15px;
+            background: #eeeeee;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+        }
+
+        .tab-heading.active {
+            background: #e7e7e7;
+            border-bottom: 1px solid #e7e7e7;
+        }
+
+        .tab {
+            background: #e7e7e7;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs" data-micro="tabs">
+            <div class="tab" data-title="Tab 1">
+                <h1>Tab 1</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
+            </div>
+
+            <div class="tab" data-title="Tab 2">
+                <h1>Tab 2</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
+            </div>
+
+            <div class="tab" data-title="Tab 3">
+                <h1>Tab 3</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
+            </div>
+
+            <div class="tab" data-title="Tab 4">
+                <h1>Tab 4</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/tabs.microlib.js"></script>
+    <script>
+        Micro.tabs(".container");
+    </script>
+</body>
+</html>
