@@ -2,17 +2,17 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
     rename = require("gulp-rename");
 
-var version = "1.0.0";
+var version = "1.0.1";
 
 gulp.task("minify", function() {
-    return gulp.src("./src/tabs.microlib-"+version+".js")
+    return gulp.src("./src/tabs.microlib.js")
         .pipe(uglify())
-        .pipe(rename( {suffix: ".min"} ))
+        .pipe(rename( {suffix: "-" + version + ".min"} ))
         .pipe(gulp.dest("./dist/"));
 });
 
 gulp.task("build", ["minify"], function() {
-	return gulp.src("./src/tabs.microlib-"+version+".js")
+	return gulp.src("./src/tabs.microlib.js")
 		.pipe(rename("tabs.microlib-latest.js"))
 		.pipe(gulp.dest("./dist/"));
 });

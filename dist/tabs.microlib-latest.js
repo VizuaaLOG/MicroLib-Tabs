@@ -4,6 +4,7 @@
  * Author: Thomas Erbe
  * Created: 10/10/2015 19:52
  * License: MIT
+ * Version: 1.0.1
  */
 
 (function(w, d) {
@@ -78,7 +79,7 @@
 
                     if(j === 0) {
                         tab.children[j].style.display = "block";
-                        tab.children[j].classList.add("active");
+                        Micro.removeClass("active", tab.children[i]);
                     }
                 }
             }
@@ -89,18 +90,18 @@
             var numTabs = tabs.length,
                 headingContainer = d.createElement("div");
 
-            headingContainer.classList.add("tabs-headings");
+            Micro.addClass("tabs-headings", headingContainer);
 
             for(k = 0; k < numTabs; k++) {
                 var heading = d.createElement("div");
-                heading.classList.add("tab-heading");
+                Micro.addClass("tab-heading", heading);
                 heading.dataset.target = tabs[k].title;
                 heading.innerHTML = tabs[k].title;
 
                 heading.addEventListener("click", Micro._processTabClick, false);
 
                 if(k === 0) {
-                    heading.classList.add("active");
+                    Micro.addClass("active", heading);
                 }
 
                 headingContainer.appendChild(heading);
@@ -139,18 +140,44 @@
          */
         for(i = 1; i < tabNum; i++) {
             tabsContainer.children[i].style.display = "none";
-            tabsContainer.children[i].classList.remove("active");
+            Micro.removeClass("active", tabsContainer.children[i]);
         }
 
 
         var numHeadings = tabHeadings.children.length;
         for(i = 0; i < numHeadings; i++) {
-            tabHeadings.children[i].classList.remove("active");
+            Micro.removeClass("active", tabHeadings.children[i]);
         }
 
-        clickedElem.classList.add("active");
+        Micro.addClass("active", clickedElem);
         target.style.display = "block";
-        target.classList.add("active");
+        Micro.addClass("active", target);
+    };
+
+    /**
+     * Helper function to remove a class from an element.
+     * @param  {string} nameClass The name of the class to remove
+     * @param  {HTMLElement} element The element to remove the class from
+     */
+    Micro.removeClass = function(nameClass, element) {
+        if(!element || !nameClass) {
+            return;
+        }
+
+        element.className = element.className.replace( new RegExp('(?:^|\\s)'+nameClass+'(?!\\S)') ,'');
+    };
+
+    /**
+     * Helper function to add a class to an element
+     * @param {string} nameClass The class to add to the element
+     * @param {HTMLElement} element   The HTML element to add the class to
+     */
+    Micro.addClass = function(nameClass, element) {
+        if(!element || !nameClass) {
+            return;
+        }
+
+        element.className += " " + nameClass;
     };
 
     w.Micro = Micro;
