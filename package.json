@@ -1,6 +1,6 @@
 {
   "name": "microlib-tabs",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Create HTML tabs without the need of dependencies or complex functions. Tabs is a small library providing a way of creating tabs without needing to create more HTML than you need to.",
   "main": "./src/tabs.microlib.js",
   "directories": {
