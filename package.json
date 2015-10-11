@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "minify": "gulp minify",
+    "build": "gulp build",
     "lint": "jshint ./src/tabs.microlib.js"
   },
   "keywords": [

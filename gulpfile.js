@@ -2,7 +2,7 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
     rename = require("gulp-rename");
 
-var version = "1.0.1";
+var version = "1.0.2";
 
 gulp.task("minify", function() {
     return gulp.src("./src/tabs.microlib.js")

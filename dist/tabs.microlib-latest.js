@@ -4,7 +4,7 @@
  * Author: Thomas Erbe
  * Created: 10/10/2015 19:52
  * License: MIT
- * Version: 1.0.1
+ * Version: 1.0.2
  */
 
 (function(w, d) {
@@ -41,7 +41,7 @@
         var numChildren = container.children.length;
 
         for(i = 0; i < numChildren; i++) {
-            if(container.children[i].dataset.hasOwnProperty("micro") && container.children[i].dataset.micro === "tabs") {
+            if(container.children[i].getAttribute("data-micro") && container.children[i].getAttribute("data-micro") === "tabs") {
 
                 Micro._tabsElements.push(container.children[i]);
             }
@@ -69,9 +69,9 @@
                 childrenNum = tab.children.length;
 
             for(j = 0; j < childrenNum; j++) {
-                if(tab.children[j].dataset.hasOwnProperty("title")) {
+                if(tab.children[j].getAttribute("data-title")) {
                     tabs.push({
-                        title: tab.children[j].dataset.title,
+                        title: tab.children[j].getAttribute("data-title"),
                         elem: tab.children[j]
                     });
 
@@ -95,7 +95,7 @@
             for(k = 0; k < numTabs; k++) {
                 var heading = d.createElement("div");
                 Micro.addClass("tab-heading", heading);
-                heading.dataset.target = tabs[k].title;
+                heading.setAttribute("data-target", tabs[k].title);
                 heading.innerHTML = tabs[k].title;
 
                 heading.addEventListener("click", Micro._processTabClick, false);
@@ -121,7 +121,7 @@
     Micro._processTabClick = function(event) {
         var clickedElem = event.target,
             tabsContainer = clickedElem.parentNode.parentNode,
-            target = clickedElem.dataset.target,
+            target = clickedElem.getAttribute("data-target"),
             tabHeadings = clickedElem.parentNode,
             i;
 
@@ -130,7 +130,7 @@
          */
         var tabNum = tabsContainer.children.length;
         for(i = 1; i < tabNum; i++) {
-            if(tabsContainer.children[i].dataset.title === target) {
+            if(tabsContainer.children[i].getAttribute("data-title") === target) {
                 target = tabsContainer.children[i];
             }
         }
