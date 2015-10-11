@@ -10,3 +10,9 @@ gulp.task("minify", function() {
         .pipe(rename( {suffix: ".min"} ))
         .pipe(gulp.dest("./dist/"));
 });
+
+gulp.task("build", ["minify"], function() {
+	return gulp.src("./src/tabs.microlib-"+version+".js")
+		.pipe(rename("tabs.microlib-latest.js"))
+		.pipe(gulp.dest("./dist/"));
+});
