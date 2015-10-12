@@ -170,6 +170,20 @@
         Micro.addClass("active", clickedElem);
         target.style.display = "block";
         Micro.addClass("active", target);
+
+        /**
+         * Get the onChange function name provided via the attribute.
+         * Will return null if it doesn't exist.
+         * @type {[type]}
+         */
+        var onChangeFunc = target.parentNode.getAttribute("data-onChange");
+
+        /**
+         * If the variable is filled. ie. not null then execute the function.
+         */
+        if(onChangeFunc) {
+            w[onChangeFunc](target, clickedElem);
+        }
     };
 
     /**
