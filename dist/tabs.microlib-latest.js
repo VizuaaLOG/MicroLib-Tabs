@@ -2,16 +2,14 @@
  * Project: MicroLibs
  * File Name: tabs.microlib.js
  * Author: Thomas Erbe
- * Created: 10/10/2015 19:52
  * License: MIT
- * Version: 1.0.2
+ * Version: 1.0.3
  */
 
 (function(w, d) {
     "use strict";
 
     var Micro = w.Micro || {};
-    Micro._tabsElements = [];
 
     /**
      * The main function to initiate a tabs call
@@ -25,6 +23,14 @@
         }
 
         /**
+         * Create the tabsElements variable to store the instances of tabs within
+         * this container. (NOTE: Was moved to be private to each function call to prevent
+         * conflicting function calls)
+         * @type {Array}
+         */
+        var _tabsElements = [];
+
+        /**
          * Assume that if the container argument is a string that we need to do the selection
          * Also assume that we want the first element
          */
@@ -35,32 +41,39 @@
         }
 
         /**
-         * Loop over all of the children inside the container. When an element with data-micro="tabs" is found
-         * then store it for later use.
+         * Check to see if the provided element is infact the tabs we want
+         * if not then look over the children finding all instances of the tabs.
          */
-        var numChildren = container.children.length;
+        if(container.getAttribute("data-micro") && container.getAttribute("data-micro") === "tabs") {
+            _tabsElements.push(container);
+        } else {
+            /**
+             * Loop over all of the children inside the container. When an element with data-micro="tabs" is found
+             * then store it for later use.
+             */
+            var numChildren = container.children.length;
 
-        for(i = 0; i < numChildren; i++) {
-            if(container.children[i].getAttribute("data-micro") && container.children[i].getAttribute("data-micro") === "tabs") {
-
-                Micro._tabsElements.push(container.children[i]);
+            for(i = 0; i < numChildren; i++) {
+                if(container.children[i].getAttribute("data-micro") && container.children[i].getAttribute("data-micro") === "tabs") {
+                    _tabsElements.push(container.children[i]);
+                }
             }
         }
 
         /**
          * Check to make sure at least one tabs container exists, otherwise exit
          */
-        if(Micro._tabsElements.length <= 0) {
+        if(_tabsElements.length <= 0) {
             return;
         }
 
         /**
          * Loop over each tab element creating the tabs markup and the functionality for each.
          */
-        var tabsLength = Micro._tabsElements.length;
+        var tabsLength = _tabsElements.length;
 
         for(i = 0; i < tabsLength; i++) {
-            var tab = Micro._tabsElements[i];
+            var tab = _tabsElements[i];
 
             /**
              * Find each tab within the main container. Look for the data-title attribute
@@ -79,7 +92,7 @@
 
                     if(j === 0) {
                         tab.children[j].style.display = "block";
-                        Micro.removeClass("active", tab.children[i]);
+                        Micro.addClass("active", tab.children[j]);
                     }
                 }
             }
