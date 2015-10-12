@@ -3,7 +3,7 @@
  * File Name: tabs.microlib.js
  * Author: Thomas Erbe
  * License: MIT
- * Version: 1.0.3
+ * Version: 1.1.0
  */
 
 (function(w, d) {
@@ -16,7 +16,7 @@
      * @param {string|HTMLElement} element The containing element to search through to create a tabs instance
      */
     Micro.tabs = function(element) {
-        var container, i, j, k;
+        var container, i, j, k, l;
 
         if(!element) {
             return;
@@ -35,27 +35,32 @@
          * Also assume that we want the first element
          */
         if(typeof element === "string") {
-            container = d.querySelectorAll(element)[0];
+            container = d.querySelectorAll(element);
         } else {
             container = element;
         }
 
         /**
-         * Check to see if the provided element is infact the tabs we want
-         * if not then look over the children finding all instances of the tabs.
+         * Loop over the following code for each element found with the querySelectorAll
          */
-        if(container.getAttribute("data-micro") && container.getAttribute("data-micro") === "tabs") {
-            _tabsElements.push(container);
-        } else {
+        for(l = 0; l < container.length; l++) {
             /**
-             * Loop over all of the children inside the container. When an element with data-micro="tabs" is found
-             * then store it for later use.
+             * Check to see if the provided element is infact the tabs we want
+             * if not then look over the children finding all instances of the tabs.
              */
-            var numChildren = container.children.length;
+            if(container[l].getAttribute("data-micro") && container[l].getAttribute("data-micro") === "tabs") {
+                _tabsElements.push(container[l]);
+            } else {
+                /**
+                 * Loop over all of the children inside the container. When an element with data-micro="tabs" is found
+                 * then store it for later use.
+                 */
+                var numChildren = container[l].children.length;
 
-            for(i = 0; i < numChildren; i++) {
-                if(container.children[i].getAttribute("data-micro") && container.children[i].getAttribute("data-micro") === "tabs") {
-                    _tabsElements.push(container.children[i]);
+                for(i = 0; i < numChildren; i++) {
+                    if(container[l].children[i].getAttribute("data-micro") && container[l].children[i].getAttribute("data-micro") === "tabs") {
+                        _tabsElements.push(container[l].children[i]);
+                    }
                 }
             }
         }
