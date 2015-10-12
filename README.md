@@ -53,6 +53,29 @@ var elem = document.getElementById("yourElement");
 Micro.tabs(elem);
 ```
 
+## Tab change event
+If you want to run some additional code when the tab is changed you can attach a function name to the tabs container. Below is an example of attaching an element to the tabs
+```html
+<div class="container">
+    <div class="tabs" data-micro="tabs" data-onChange="funcName">
+        <div class="tab" data-title="Tab 1">
+            <h1>Tab 1</h1>
+        </div>
+        ...
+    </div>
+</div>
+```
+
+The above example will call the function called ```funcName``` every time the tab is changed. Below is the function including the arguments passed to the function.
+```javascript
+function funcName(newContent, newTab) {
+    // Do stuff here
+}
+```
+
++ **newContent -** this contains the html element of the new tab-content which is available.
++ **newTab -** this contains the html element of the new tab-heading which is now active, aka the clicked heading.
+
 ## Feature Requests
 If you have any features you would like to see in this library then please leave an issue with your idea and I'll look into it and see if I think it should be added.
 
