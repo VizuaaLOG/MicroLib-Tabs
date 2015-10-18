@@ -1,0 +1,25 @@
+{
+  "name": "microlib-tabs",
+  "description": "Create HTML tabs without the need of dependencies or complex functions. Tabs is a small library providing a way of creating tabs without needing to create more HTML than you need to.",
+  "main": "./dist/tabs.microlib-latest.js",
+  "authors": [
+    "Thomas Erbe <vizuaalog@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "tabs",
+    "html",
+    "micro",
+    "libaray",
+    "lightweight"
+  ],
+  "homepage": "https://github.com/VizuaaLOG/microlib-tabs",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

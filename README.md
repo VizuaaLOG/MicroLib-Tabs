@@ -3,6 +3,13 @@ Tabs is part of the MicroLib libaray collection created by Thomas Erbe. It is a 
 
 If you have any issues regarding a MicroLib library then please use the issue reporter on that library to report the issue. The same thing applies if you have a feature request.
 
+## Installation
+**Option 1** Install via Bower
+```
+bower install microlib-tabs
+```
+**Option 2** Download and include manually
+
 ## Usage
 Making use of Tabs is super easy! All you need to do is put the right markup in your HTML and then call the function on it.
 
