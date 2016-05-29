@@ -13,6 +13,8 @@
  * @param  {Function} callback
  */
 function forEach(array, callback) {
+    "use strict";
+
     for(var i = 0; i < array.length; i++) {
         callback(i, array[i]);
     }
@@ -24,18 +26,68 @@ function forEach(array, callback) {
  * @return {string}
  */
 function makeUID() {
+    "use strict";
+
     return ('0000' + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4);
+}
+
+/**
+ * Check to see if the element has a class
+ * @method hasClass
+ * @param  {object}  element
+ * @param  {string}  className
+ * @return {Boolean}
+ */
+function hasClass(element, className) {
+    "use strict";
+
+    var classes = element.className.split(' ');
+    return classes.indexOf(className) !== -1;
+}
+
+/**
+ * Add a class to an element
+ * @method addClass
+ * @param  {object} element
+ * @param  {string} className
+ */
+function addClass(element, className) {
+    "use strict";
+
+    var classes = element.className.split(' ');
+    if(!hasClass(element, className)) {
+        classes.push(className);
+    }
+    element.className = classes.join(' ');
+}
+
+/**
+ * Remove a class from an element
+ * @method removeClass
+ * @param  {object}    element
+ * @param  {string}    className
+ */
+function removeClass(element, className) {
+    "use strict";
+
+    var classes = element.className.split(' ');
+    if(hasClass(element, className)) {
+        classes.splice(classes.indexOf(className), 1);
+    }
+    element.className = classes.join(' ');
 }
 
 /**
  * Search through an elements children, finding the search string in either
  * the class or id.
  * @method findFromElement
- * @param  {object}        element    [description]
- * @param  {string}        searchItem [description]
- * @return {array}                   [description]
+ * @param  {object}        element
+ * @param  {string}        searchItem
+ * @return {array}
  */
 function findFromElement(element, searchItem) {
+    "use strict";
+
     var children = element.children;
     var results = [];
 
@@ -46,46 +98,6 @@ function findFromElement(element, searchItem) {
     });
 
     return results;
-}
-
-/**
- * Add a class to an element
- * @method addClass
- * @param  {object} element
- * @param  {string} className
- */
-function addClass(element, className) {
-    var classes = element.className.split(' ');
-    if(!this.hasClass(element, className)) {
-        classes.push(className);
-    }
-    element.className = classes.join(' ');
-}
-
-/**
- * Check to see if the element has a class
- * @method hasClass
- * @param  {object}  element
- * @param  {string}  className
- * @return {Boolean}           [description]
- */
-function hasClass(element, className) {
-    var classes = element.className.split(' ');
-    return classes.indexOf(className) !== -1;
-}
-
-/**
- * Remove a class from an element
- * @method removeClass
- * @param  {object}    element
- * @param  {string}    className
- */
-function removeClass(element, className) {
-    var classes = element.className.split(' ');
-    if(this.hasClass(element, className)) {
-        classes.splice(classes.indexOf(className), 1);
-    }
-    element.className = classes.join(' ');
 }
 
 var MicroTabs = function MicroTabs(element) {

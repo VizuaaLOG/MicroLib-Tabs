@@ -1,4 +1,4 @@
-import {forEach, addClass, hasClass, removeClass, findFromElement, makeUID} from './utils.microlib.js';
+import {forEach, addClass, hasClass, removeClass, findFromElement, makeUID} from '../bower_components/MicroLib-Utils/src/utils.microlib.js';
 
 class MicroTabs {
     /**
