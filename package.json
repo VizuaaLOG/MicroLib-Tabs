@@ -14,6 +14,7 @@
     "lightweight"
   ],
   "scripts": {
+    "build-all": "npm run build-prod && npm run build-standalone-prod",
     "build": "rollup -c > dist/tabs.microlib-latest.js",
     "build-standalone": "rollup -c rollup.config.standalone.js > dist/tabs-standalone.microlib-latest.js",
     "build-prod": "npm run build && uglifyjs dist/tabs.microlib-latest.js --compress --mangle --screw-ie8 --output dist/tabs.microlib-2.0.0.min.js",

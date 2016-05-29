@@ -23,11 +23,9 @@ var MicroTabs = function MicroTabs(element) {
  * @method findTabs
  */
 MicroTabs.prototype.findTabs = function findTabs() {
-        var this$1 = this;
-
     var tabs = [];
     forEach(this._element, function (index, item) {
-        var results = this$1.findFromElement(item, 'microlib_tabs_tab');
+        var results = findFromElement(item, 'microlib_tabs_tab');
         forEach(results, function (index, item) {
             item.id = 'microlib_tabs_' + makeUID();
         });
@@ -81,8 +79,8 @@ MicroTabs.prototype.generateTabNavigation = function generateTabNavigation() {
 MicroTabs.prototype._processClick = function _processClick(e) {
     var target = e.target.getAttribute('data-target');
     var element = document.querySelector('#' + target);
-    var tabs = this.findFromElement(e.target.parentNode.parentNode, 'microlib_tabs_tab');
-    var navItems = this.findFromElement(e.target.parentNode, 'microlib_tabs_nav_item');
+    var tabs = findFromElement(e.target.parentNode.parentNode, 'microlib_tabs_tab');
+    var navItems = findFromElement(e.target.parentNode, 'microlib_tabs_nav_item');
 
     forEach(navItems, function (index, item) {
         removeClass(item, 'microlib_active');
