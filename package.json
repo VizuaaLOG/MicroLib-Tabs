@@ -1,41 +1,29 @@
 {
-    "name": "microlib-tabs",
-    "version": "2.0.0",
-    "description": "Create HTML tabs without the need of dependencies or complex functions. Tabs is a small library providing a way of creating tabs without needing to create more HTML than you need to.",
-    "directories": {
-        "test": "test"
-    },
-    "main": "index.js",
-    "scripts": {
-        "build-prod": "webpack -p && node ./scripts/rename.js && npm run build",
-        "build": "webpack --devtool inline-source-map",
-        "serve": "webpack --watch --devtool inline-source-map",
-        "test": "jest"
-    },
-    "keywords": [
-        "tabs",
-        "html",
-        "micro",
-        "libaray",
-        "lightweight"
-    ],
-    "author": "Thomas Erbe <vizuaalog@gmail.com>",
-    "license": "MIT",
-    "devDependencies": {
-        "babel-core": "^4.4.3",
-        "babel-jest": "^4.0.0",
-        "babel-loader": "^4.0.0",
-        "babelify": "^5.0.3",
-        "es6ify": "^1.6.0",
-        "jest": "^0.1.37",
-        "jshint": "^2.6.3",
-        "jshint-loader": "^0.8.3",
-        "uglify-js": "^2.4.16",
-        "webpack": "^1.5.3"
-    },
-    "jest": {
-        "scriptPreprocessor": "./node_modules/babel-jest",
-        "testFileExtensions": ["es6", "js"],
-        "moduleFileExtensions": ["js", "json", "es6"]
-    }
+  "name": "microlib-tabs",
+  "version": "2.0.0",
+  "description": "Create HTML tabs without the need of dependencies or complex functions. Tabs is a small library providing a way of creating tabs without needing to create more HTML than you need to.",
+  "directories": {
+    "test": "test"
+  },
+  "main": "index.js",
+  "keywords": [
+    "tabs",
+    "html",
+    "micro",
+    "libaray",
+    "lightweight"
+  ],
+  "scripts": {
+    "build": "rollup -c > dist/tabs.microlib-latest.js",
+    "build-standalone": "rollup -c rollup.config.standalone.js > dist/tabs-standalone.microlib-latest.js",
+    "build-prod": "npm run build && uglifyjs dist/tabs.microlib-latest.js --compress --mangle --screw-ie8 --output dist/tabs.microlib-2.0.0.min.js",
+    "build-standalone-prod": "npm run build-standalone && uglifyjs dist/tabs-standalone.microlib-latest.js --compress --mangle --screw-ie8 --output dist/tabs-standalone.microlib-2.0.0.min.js"
+  },
+  "author": "Thomas Erbe <vizuaalog@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^0.26.3",
+    "rollup-plugin-buble": "^0.10.0",
+    "uglify-js": "^2.6.2"
+  }
 }
