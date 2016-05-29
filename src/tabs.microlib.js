@@ -19,16 +19,18 @@ class MicroTabs {
             this._element = element;
         }
 
-        this._tabs = this.findTabs();
+        this._tabs = this._findTabs();
 
-        this.generateTabNavigation();
+        this._generateTabNavigation();
+
+        this.onChange = function(newContent, newTab, event){};
     }
 
     /**
      * Loop over the tabs inside our element(s) and assign them a unique ID
      * @method findTabs
      */
-    findTabs() {
+    _findTabs() {
         let tabs = [];
         forEach(this._element, (index, item) => {
             let results = findFromElement(item, 'microlib_tabs_tab');
@@ -44,7 +46,7 @@ class MicroTabs {
      * Generate the navigation markup and set the first items to active
      * @method generateTabNavigation
      */
-    generateTabNavigation() {
+    _generateTabNavigation() {
         forEach(this._tabs, (index, item) => {
             let navContainer = document.createElement('div');
             addClass(navContainer, 'microlib_tabs_nav');
@@ -96,6 +98,8 @@ class MicroTabs {
 
         addClass(element, 'microlib_active');
         addClass(e.target, 'microlib_active');
+
+        this.onChange(element, e.target, e);
     }
 }
 

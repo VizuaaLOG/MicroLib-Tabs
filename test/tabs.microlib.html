@@ -50,7 +50,12 @@
 
         <script src="../dist/tabs-standalone.microlib-latest.js"></script>
         <script>
-            new ML.Tabs('.microlib_tabs');
+            var myTabs = new ML.Tabs('.microlib_tabs');
+            myTabs.onChange = function(newContent, newTab, e) {
+                console.log("Content: ", newContent);
+                console.log("Tab: ", newTab);
+                console.log("Event: ", e);
+            }
         </script>
     </body>
 

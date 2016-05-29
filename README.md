@@ -57,6 +57,13 @@ ML.Tabs(".tabs");
 ML.Tabs("#tab");
 ```
 
+## Events
+You can call a function when the tab changes by attaching an onChange function to the MicroTab instance, this then receives 3 parameter; the new content element, the new tab element and the mouse click event.
+```javascript
+var myTabs = new ML.Tabs('.tabs');
+myTabs.onChange = function(newContent, newTab, e) {console.log('changed')};
+```
+
 ## Feature Requests
 If you have any features you would like to see in this library then please leave an issue with your idea and I'll look into it and see if I think it should be added.
 

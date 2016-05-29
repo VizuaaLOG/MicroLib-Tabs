@@ -13,16 +13,18 @@ var MicroTabs = function MicroTabs(element) {
         this._element = element;
     }
 
-    this._tabs = this.findTabs();
+    this._tabs = this._findTabs();
 
-    this.generateTabNavigation();
+    this._generateTabNavigation();
+
+    this.onChange = function(newContent, newTab, event){};
 };
 
 /**
  * Loop over the tabs inside our element(s) and assign them a unique ID
  * @method findTabs
  */
-MicroTabs.prototype.findTabs = function findTabs() {
+MicroTabs.prototype._findTabs = function _findTabs() {
     var tabs = [];
     forEach(this._element, function (index, item) {
         var results = findFromElement(item, 'microlib_tabs_tab');
@@ -38,7 +40,7 @@ MicroTabs.prototype.findTabs = function findTabs() {
  * Generate the navigation markup and set the first items to active
  * @method generateTabNavigation
  */
-MicroTabs.prototype.generateTabNavigation = function generateTabNavigation() {
+MicroTabs.prototype._generateTabNavigation = function _generateTabNavigation() {
         var this$1 = this;
 
     forEach(this._tabs, function (index, item) {
@@ -92,6 +94,8 @@ MicroTabs.prototype._processClick = function _processClick(e) {
 
     addClass(element, 'microlib_active');
     addClass(e.target, 'microlib_active');
+
+    this.onChange(element, e.target, e);
 };
 
 window.ML = window.ML || {};
