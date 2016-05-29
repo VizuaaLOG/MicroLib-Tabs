@@ -72,3 +72,5 @@ Any issues you have please also post in the issues section, myself or other cont
 
 ## Contributing
 If you would like to contribute to this project then please fork the repository, make your changes and then publish a pull request. You could also ask other people in the issues section first. Please make your the added features pass the ```npm run lint``` task without any issues.
+
+In order to build the standalone file, you may need to run a ```bower install``` this will download the latest version of MicroLib-Utils.
