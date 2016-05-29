@@ -14,6 +14,7 @@
     "lightweight"
   ],
   "scripts": {
+    "lint": "jshint ./src/tabs.microlib.js",
     "build-all": "npm run build-prod && npm run build-standalone-prod",
     "build": "rollup -c > dist/tabs.microlib-latest.js",
     "build-standalone": "rollup -c rollup.config.standalone.js > dist/tabs-standalone.microlib-latest.js",
@@ -23,6 +24,7 @@
   "author": "Thomas Erbe <vizuaalog@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "jshint": "^2.9.2",
     "rollup": "^0.26.3",
     "rollup-plugin-buble": "^0.10.0",
     "uglify-js": "^2.6.2"
