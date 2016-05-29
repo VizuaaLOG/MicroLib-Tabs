@@ -23,6 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "MicroLib-Utils": "VizuaaLOG/MicroLib-Utils"
+    "microlib-utils": "^1.0.1"
   }
 }
