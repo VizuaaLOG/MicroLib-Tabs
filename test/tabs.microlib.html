@@ -1,127 +1,57 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tabs Test Document</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabs Test Document</title>
 
-        .tabs-headings {
-            width: 100%;
-            height: 39px;
-        }
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-        .tab-heading {
-            float: left;
-            padding: 10px 15px;
-            background: #eeeeee;
-            margin-right: 5px;
-            border: 1px solid #ccc;
-            border-bottom: none;
-        }
+            h1 {
+                margin-top: 0;
+            }
+        </style>
+        <link href="tabs.microlib.css" rel="stylesheet">
+    </head>
 
-        .tab-heading.active {
-            background: #e7e7e7;
-            border-bottom: 1px solid #e7e7e7;
-        }
+    <body>
+        <div class="microlib_tabs">
+            <div class="microlib_tabs_tab" data-title="Title 1">
+                <h1>Tab 1</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
 
-        .tab {
-            background: #e7e7e7;
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
+            <div class="microlib_tabs_tab" data-title="Title 2">
+                <h1>Tab 2</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
 
-        h1 {
-            margin-top: 0;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <h1>I'm in a container</h1>
-    <div class="tabs" data-micro="tabs">
-        <div class="tab" data-title="Tab 1">
-            <h1>Tab 1</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
+            <div class="microlib_tabs_tab" data-title="Title 3">
+                <h1>Tab 3</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
+
+            <div class="microlib_tabs_tab" data-title="Title 4">
+                <h1>Tab 4</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
         </div>
 
-        <div class="tab" data-title="Tab 2">
-            <h1>Tab 2</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-        </div>
+        <script src="../dist/tabs.microlib-2.0.0.min.js"></script>
+        <script>
+            new MicroTabs('.microlib_tabs');
+        </script>
+    </body>
 
-        <div class="tab" data-title="Tab 3">
-            <h1>Tab 3</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-        </div>
-
-        <div class="tab" data-title="Tab 4">
-            <h1>Tab 4</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <h1>I'm in a container</h1>
-    <div class="tabs" data-micro="tabs" data-onChange="myFunc">
-        <div class="tab" data-title="Tab 1">
-            <h1>Tab 1</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-        </div>
-
-        <div class="tab" data-title="Tab 2">
-            <h1>Tab 2</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-        </div>
-
-        <div class="tab" data-title="Tab 3">
-            <h1>Tab 3</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-        </div>
-
-        <div class="tab" data-title="Tab 4">
-            <h1>Tab 4</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-        </div>
-    </div>
-</div>
-
-<h1>I'm not in a container</h1>
-<div class="tabs no-container-demo" data-micro="tabs">
-    <div class="tab" data-title="Tab 1">
-        <h1>Tab 1</h1>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-    </div>
-
-    <div class="tab" data-title="Tab 2">
-        <h1>Tab 2</h1>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-    </div>
-
-    <div class="tab" data-title="Tab 3">
-        <h1>Tab 3</h1>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-    </div>
-
-    <div class="tab" data-title="Tab 4">
-        <h1>Tab 4</h1>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio, placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique. Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus quo!
-    </div>
-</div>
-
-<script src="../src/tabs.microlib.js"></script>
-<script>
-    Micro.tabs(".container");
-    Micro.tabs(".no-container-demo");
-
-    function myFunc(newContent, newTab) {
-        console.log(newContent);
-        console.log(newTab);
-    }
-</script>
-</body>
-</html> 
+</html>

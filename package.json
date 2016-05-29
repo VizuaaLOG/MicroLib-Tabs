@@ -1,30 +1,41 @@
 {
-  "name": "microlib-tabs",
-  "version": "1.0.2",
-  "description": "Create HTML tabs without the need of dependencies or complex functions. Tabs is a small library providing a way of creating tabs without needing to create more HTML than you need to.",
-  "main": "./src/tabs.microlib.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "minify": "gulp minify",
-    "build": "gulp build",
-    "lint": "jshint ./src/tabs.microlib.js"
-  },
-  "keywords": [
-    "tabs",
-    "html",
-    "micro",
-    "libaray",
-    "lightweight"
-  ],
-  "author": "Thomas Erbe <vizuaalog@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.4.1",
-    "jshint": "^2.8.0"
-  }
+    "name": "microlib-tabs",
+    "version": "2.0.0",
+    "description": "Create HTML tabs without the need of dependencies or complex functions. Tabs is a small library providing a way of creating tabs without needing to create more HTML than you need to.",
+    "directories": {
+        "test": "test"
+    },
+    "main": "index.js",
+    "scripts": {
+        "build-prod": "webpack -p && node ./scripts/rename.js && npm run build",
+        "build": "webpack --devtool inline-source-map",
+        "serve": "webpack --watch --devtool inline-source-map",
+        "test": "jest"
+    },
+    "keywords": [
+        "tabs",
+        "html",
+        "micro",
+        "libaray",
+        "lightweight"
+    ],
+    "author": "Thomas Erbe <vizuaalog@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-core": "^4.4.3",
+        "babel-jest": "^4.0.0",
+        "babel-loader": "^4.0.0",
+        "babelify": "^5.0.3",
+        "es6ify": "^1.6.0",
+        "jest": "^0.1.37",
+        "jshint": "^2.6.3",
+        "jshint-loader": "^0.8.3",
+        "uglify-js": "^2.4.16",
+        "webpack": "^1.5.3"
+    },
+    "jest": {
+        "scriptPreprocessor": "./node_modules/babel-jest",
+        "testFileExtensions": ["es6", "js"],
+        "moduleFileExtensions": ["js", "json", "es6"]
+    }
 }
