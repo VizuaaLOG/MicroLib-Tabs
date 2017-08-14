@@ -4,11 +4,16 @@ Tabs is part of the MicroLib libaray collection created by Thomas Erbe. It is a 
 If you have any issues regarding a MicroLib library then please use the issue reporter on that library to report the issue. The same thing applies if you have a feature request.
 
 ## Installation
-**Option 1** Install via Bower
+**Option 1** Install via NPM
+```
+npm install microlib-tabs
+```
+
+**Option 2** Install via Bower
 ```
 bower install microlib-tabs
 ```
-**Option 2** Download and include manually
+**Option 3** Download and include manually
 
 ## File differences
 In the newer versions of MicroLib libraries the have two files, ```{moduleName}.microlib-x.x.x.js``` and ```{moduleName}-standalone.microlib.x.x.x.js```. When moving over to use ES6 any utility / helper methods were extracted into a utility file, this is shared among all MicroLib libraries. Should you wish to use a single library i.e Tabs, then you can the standalone variant, this includes the Tabs code as well as the helper methods it needs, nothing else. It is recommended to use the non-standalone file if you use more than one MicroLib libary as this way the methods are defined once and not multiple times.
