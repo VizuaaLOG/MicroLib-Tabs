@@ -94,10 +94,16 @@ class MicroTabs {
      * @param  {object}      e Event object
      */
     _processClick(e) {
-        let target = e.target.getAttribute('data-target');
+        let _target = e.target;
+        if(!_target.classList.contains(this.options.nav_item_class)){
+            while(_target && !_target.classList.contains(this.options.nav_item_class)){
+                _target = _target.parentElement || _target.parentNode;
+            }
+        }
+        let target = _target.getAttribute('data-target');
         let element = document.querySelector('#' + target);
-        let tabs = findFromElement(e.target.parentNode.parentNode, this.options.tab_class);
-        let navItems = findFromElement(e.target.parentNode, this.options.nav_item_class);
+        let tabs = findFromElement(_target.parentNode.parentNode, this.options.tab_class);
+        let navItems = findFromElement(_target.parentNode, this.options.nav_item_class);
 
         forEach(navItems, (index, item) => {
             removeClass(item, this.options.active_class);
@@ -108,9 +114,9 @@ class MicroTabs {
         });
 
         addClass(element, this.options.active_class);
-        addClass(e.target, this.options.active_class);
+        addClass(_target, this.options.active_class);
 
-        this.onChange(element, e.target, e);
+        this.onChange(element, _target, e);
     }
 }
 
