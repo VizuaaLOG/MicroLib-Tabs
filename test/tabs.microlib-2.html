@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabs Test Document</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+        </style>
+        <link href="tabs.microlib.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="microlib_tabs">
+            <div class="microlib_tabs_tab" data-title="<span>Title 1</span>">
+                <h1>Tab 1</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
+
+            <div class="microlib_tabs_tab" data-title="<span>Title 2</span>">
+                <h1>Tab 2</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
+
+            <div class="microlib_tabs_tab" data-title="<span>Title 3</span>">
+                <h1>Tab 3</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
+
+            <div class="microlib_tabs_tab" data-title="<span>Title 4</span>">
+                <h1>Tab 4</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet consectetur perspiciatis sunt. Accusamus cum cupiditate dolor dolore ducimus eius enim esse illo inventore iusto magnam, magni maiores maxime neque, numquam odio,
+                placeat quasi qui quis quos recusandae sapiente veritatis! Ad architecto deleniti esse explicabo hic, inventore iste minima omnis repellat repudiandae. Blanditiis cumque dolore eum laboriosam, minus modi nam? Accusamus quidem sequi similique.
+                Consequatur consequuntur cum ex exercitationem facere in ipsam maiores minus molestiae, mollitia nihil nobis quam quisquam quo quos sit suscipit ullam voluptatum. Assumenda distinctio eius eum fugit iusto nihil quasi ut? Fugiat ipsa natus
+                quo!
+            </div>
+        </div>
+
+        <script src="../dist/tabs-standalone.microlib-latest.js"></script>
+        <script>
+            var myTabs = new ML.Tabs('.microlib_tabs');
+            myTabs.onChange = function(newContent, newTab, e) {
+                console.log("Content: ", newContent);
+                console.log("Tab: ", newTab);
+                console.log("Event: ", e);
+            }
+        </script>
+    </body>
+
+</html>
